@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{03AED807-CA2D-4823-B321-41C470174F0B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Braincase.GanttChart</RootNamespace>
+    <AssemblyName>GanttChartExample</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>gantt-chart.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExampleSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExampleSimple.Designer.cs">
+      <DependentUpon>ExampleSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExampleFull.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExampleFull.Designer.cs">
+      <DependentUpon>ExampleFull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BMProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BMProject.Designer.cs">
+      <DependentUpon>BMProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_Add.Designer.cs">
+      <DependentUpon>Manager_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResourceManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResourceManagement.Designer.cs">
+      <DependentUpon>ResourceManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resource_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resource_Add.Designer.cs">
+      <DependentUpon>Resource_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedule_Add.Designer.cs">
+      <DependentUpon>Schedule_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project_Add.Designer.cs">
+      <DependentUpon>Project_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ExampleSimple.resx">
+      <DependentUpon>ExampleSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExampleFull.resx">
+      <DependentUpon>ExampleFull.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BMProject.resx">
+      <DependentUpon>BMProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_Add.resx">
+      <DependentUpon>Manager_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceManagement.resx">
+      <DependentUpon>ResourceManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource_Add.resx">
+      <DependentUpon>Resource_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schedule_Add.resx">
+      <DependentUpon>Schedule_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project_Add.resx">
+      <DependentUpon>Project_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GanttChart\GanttChart.csproj">
+      <Project>{f98f97d5-4f29-4531-ad05-d90f8e84c9aa}</Project>
+      <Name>GanttChart</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gantt-chart.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
